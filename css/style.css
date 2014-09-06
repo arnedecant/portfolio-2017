@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /* --- VARIABLES --- */
 #audiocity {
   background-image: url(/audiocity/img/logo1.png);
@@ -106,11 +106,6 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(../img/bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 /* Intro */
 .intro {
@@ -201,7 +196,7 @@ i.scroll:hover {
   }
 }
 /* --- GENERAL --- */
-/*#region GENERAL*/
+/*# sourceMappingURL=style.css.map */
 html {
   overflow-y: auto;
   background-color: #fff;
@@ -211,6 +206,24 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+.hexbg {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  overflow: hidden;
+  width: 200%;
+  height: 150%;
+  z-index: 0;
+}
+.overlay {
+  background-color: rgba(250, 250, 250, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 video#bgvid {
   position: absolute;
   top: 0;
@@ -219,20 +232,19 @@ video#bgvid {
   min-height: 100%;
   width: auto;
   height: auto;
-  background: url(polina.jpg) no-repeat;
   background-size: cover;
 }
 .showcase .hex.primary {
-  background-color: #3399cc;
+  background-color: #00e5a8;
 }
 .showcase .hex.secondary {
-  background-color: #000000;
+  background-color: #d251ea;
 }
 .showcase .hex.tertiary {
-  background-color: #000000;
+  background-color: #bfbfbf;
 }
 .showcase .hex.quaternary {
-  background-color: #000000;
+  background-color: #16a6b6;
 }
 .grid-1 {
   width: 50px;
@@ -476,23 +488,23 @@ video#bgvid {
   width: 100%;
   height: 100%;
   z-index: 15;
-  background: #16a6b6;
+  background: #00e5a8;
 }
 .list-hex-grid div.hex.primary > a,
 .list-hex-grid div.hex.primary > div {
-  background-color: #16a6b6;
+  background-color: #00e5a8;
 }
 .list-hex-grid div.hex.primary .after {
-  background-color: #16a6b6;
-  border-color: #16a6b6;
+  background-color: #00e5a8;
+  border-color: #00e5a8;
 }
 .list-hex-grid div.hex.secondary > a,
 .list-hex-grid div.hex.secondary > div {
-  background-color: #ee6557;
+  background-color: #d251ea;
 }
 .list-hex-grid div.hex.secondary .after {
-  background-color: #ee6557;
-  border-color: #ee6557;
+  background-color: #d251ea;
+  border-color: #d251ea;
 }
 .list-hex-grid div.hex.tertiary > a,
 .list-hex-grid div.hex.tertiary > div {
@@ -510,13 +522,6 @@ video#bgvid {
   background-color: #fff;
   border-color: #fff;
 }
-.hex:hover {
-  cursor: pointer;
-  -moz-animation: bounceIn 1s;
-  -o-animation: bounceIn 1s;
-  -webkit-animation: bounceIn 1s;
-  animation: bounceIn 1s;
-}
 html body .mq-mid,
 html body .mq-small,
 html body .mq-mobile,
@@ -525,7 +530,7 @@ html body .mq-small-i-block,
 html body .mq-mobile-i-block {
   display: none !important;
 }
-/*#endregion*/
+/*# sourceMappingURL=style.css.map */
 @media screen and (max-width: 1290px) {
   /* line 2156, ../../../src/scss/screen.scss */
   #work-projects .container {

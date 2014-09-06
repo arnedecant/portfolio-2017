@@ -19,6 +19,26 @@ body {
 
 }
 
+.hexbg{
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    overflow: hidden;
+    width: 200%;
+    height: 150%;
+    z-index: 0;
+}
+
+.overlay{
+    background-color: rgba(250,250,250,0.90);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 video#bgvid {
     position: absolute;
     top: 0;
@@ -28,7 +48,7 @@ video#bgvid {
     width: auto;
     height: auto;
     //z-index: -100;
-    background: url(polina.jpg) no-repeat;
+    //background: url(polina.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -339,37 +359,37 @@ video#bgvid {
     width: 100%;
     height: 100%;
     z-index: 15;
-    background: #16a6b6;
+    background: @cPrimary;
 }
 
 .list-hex-grid div.hex.primary > a,
 .list-hex-grid div.hex.primary > div {
-    background-color: #16a6b6;
+    background-color: @cPrimary;
 }
 
 .list-hex-grid div.hex.primary .after {
-    background-color: #16a6b6;
-    border-color: #16a6b6;
+    background-color: @cPrimary;
+    border-color: @cPrimary;
 }
 
 .list-hex-grid div.hex.secondary > a,
 .list-hex-grid div.hex.secondary > div {
-    background-color: #ee6557;
+    background-color: @cSecondary;
 }
 
 .list-hex-grid div.hex.secondary .after {
-    background-color: #ee6557;
-    border-color: #ee6557;
+    background-color: @cSecondary;
+    border-color: @cSecondary;
 }
 
 .list-hex-grid div.hex.tertiary > a,
 .list-hex-grid div.hex.tertiary > div {
-    background-color: #bfbfbf;
+    background-color: @cTertiary;
 }
 
 .list-hex-grid div.hex.tertiary .after {
-    background-color: #bfbfbf;
-    border-color: #bfbfbf;
+    background-color: @cTertiary;
+    border-color: @cTertiary;
 }
 
 .list-hex-grid div.hex.quaternary > a,
@@ -380,14 +400,6 @@ video#bgvid {
 .list-hex-grid div.hex.quaternary .after {
     background-color: #fff;
     border-color: #fff;
-}
-
-.hex:hover {
-    cursor: pointer;
-    -moz-animation: bounceIn 1s;
-    -o-animation: bounceIn 1s;
-    -webkit-animation: bounceIn 1s;
-    animation: bounceIn 1s;
 }
 
 html body .mq-mid,
