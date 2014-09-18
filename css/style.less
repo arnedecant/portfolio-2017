@@ -13,6 +13,13 @@ body {
     //overflow: hidden;
     position:relative;
     overflow-x: hidden;
+    z-index: -9999;
+}
+
+.header .vert-text > h1{
+    font-family: @fPrimary;
+    font-size: 12em;
+    color: #333;
 }
 
 .primary{
@@ -26,17 +33,17 @@ body {
     overflow: hidden;
     width: 200%;
     height: 150%;
-    z-index: 0;
+    z-index: -10;
 }
 
 .overlay{
-    background-color: rgba(250,250,250,0.90);
+    background-color: rgba(250,250,250,0.9);
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: -5;
 }
 
 video#bgvid {
