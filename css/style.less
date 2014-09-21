@@ -16,6 +16,30 @@ body {
     z-index: -9999;
 }
 
+a{
+    color: @cPrimary;
+
+    &:hover{
+        color: darken(@cPrimary, 10%);
+        text-decoration: none;
+    }
+}
+
+blockquote{
+    border:0;
+    font-size: @sExtraLarge;
+
+    cite{
+        display:block;
+        text-align:right;
+        font-size: @sLarge;
+
+        &:before{
+            content: "\2014 \00A0";
+        }
+    }
+}
+
 .header .vert-text > h1{
     font-family: @fPrimary;
     font-size: 12em;

@@ -211,6 +211,25 @@ body {
   overflow-x: hidden;
   z-index: -9999;
 }
+a {
+  color: #00e5a8;
+}
+a:hover {
+  color: #00b283;
+  text-decoration: none;
+}
+blockquote {
+  border: 0;
+  font-size: 28px;
+}
+blockquote cite {
+  display: block;
+  text-align: right;
+  font-size: 18px;
+}
+blockquote cite:before {
+  content: "\2014 \00A0";
+}
 .header .vert-text > h1 {
   font-family: Arual;
   font-size: 12em;
@@ -248,7 +267,7 @@ video#bgvid {
   background-color: #00e5a8;
 }
 .showcase .hex.secondary {
-  background-color: #d251ea;
+  background-color: #d268ea;
 }
 .showcase .hex.tertiary {
   background-color: #bfbfbf;
@@ -510,11 +529,11 @@ video#bgvid {
 }
 .list-hex-grid div.hex.secondary > a,
 .list-hex-grid div.hex.secondary > div {
-  background-color: #d251ea;
+  background-color: #d268ea;
 }
 .list-hex-grid div.hex.secondary .after {
-  background-color: #d251ea;
-  border-color: #d251ea;
+  background-color: #d268ea;
+  border-color: #d268ea;
 }
 .list-hex-grid div.hex.tertiary > a,
 .list-hex-grid div.hex.tertiary > div {

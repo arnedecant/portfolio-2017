@@ -2,7 +2,7 @@
     ["Martin Fowler", "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."],
     ["Steve McConnel", "Good code is its own best documentation. As you're about to add a comment, ask yourself, \"How can I improve the code so that this comment isn't needed?\""],
     ["Steve McConnel", "It's okay to figure out murder mysteries, but you shouldn't need to figure out code. You should be able to read it."],
-    ["Paul Graham", "When you catch bugs early, you also get fewer compound bugs. Compound bugs are two separate bugs that interact: you trip going downstairs, and when you reach for the handrail it comes off in your hand."],
+    ["Paul Graham", "When you catch bugs early, you also get fewer compound bugs. Compound bugs are two separate bugs that interact: you trip going downstairs and when you reach for the handrail it comes off in your hand."],
     ["Jakob Nielsen", "Usability rules the Web. Simply stated, if the customer can’t find a product, then he or she will not buy it."],
     ["Robert Stuberg", "The trouble with so many of us is that we underestimate the power of simplicity."],
     ["Paul Heckel", "Because every person knows what he likes, every person thinks he is an expert on user interfaces."],
@@ -12,6 +12,7 @@
 ];
 
 var css = "";
+var quote = "";
 var firstcss = "";
 var secondcss = "";
 var thirdcss = "";
@@ -33,6 +34,9 @@ $(document).ready(function () {
         generateHexes(initLines, initAmount);
         window.setInterval(bubbleHex, 50);
     }
+
+    $(".callout .vert-text .container").append(quote());
+    
 });
 
 function bubbleHex() {
@@ -57,12 +61,12 @@ function animationHover(element, animation) {
     element = $(element);
     element.hover(
       function () {
-          element.addClass('animated ' + animation);
+          element.addClass("animated " + animation);
       },
       function () {
           //wait for animation to finish before removing classes
           window.setTimeout(function () {
-              element.removeClass('animated ' + animation);
+              element.removeClass("animated " + animation);
           }, 1000);
       }
     );
@@ -109,37 +113,50 @@ function randomColor() {
 
 function generateHexes(amountlines, amounthexes) {
 
-    var $html = "";
+    var html = "";
 
-    $html += "<div class=\"list-hex-grid list-inline-block clearfix\">";
+    html += "<div class='list-hex-grid list-inline-block clearfix'>";
 
     for (i = 0; i < amountlines; i++) {
         if (i % 2 == 0) {
-            $html += addHexLine(amounthexes);
+            html += addHexLine(amounthexes);
         } else {
-            $html += addHexLine(amounthexes - 1);
+            html += addHexLine(amounthexes - 1);
         }
     }
 
-    $html += "</div>";
+    html += "</div>";
 
-    $(".hexbg").append($html);
+    $(".hexbg").append(html);
 }
 
 function addHexLine(amounthexes) {
-    var $html = "";
+    var html = "";
 
     for (j = 0; j < amounthexes; j++) {
-        $html += "<div class=\"hex grid-3 " + color() + "\">";
-        $html += "<a href=\"#\">";
-        $html += "<div class=\"hex-1\"><span class=\"after\"></span></div>";
-        $html += "<div class=\"hex-2\"><span class=\"after\"></span></div>";
-        $html += "<span class=\"after\"></span>";
-        $html += "</a>";
-        $html += "</div>";
+        html += "<div class='hex grid-3 " + color() + "'>";
+        html += "<a href='#'>";
+        html += "<div class='hex-1'><span class='after'></span></div>";
+        html += "<div class='hex-2'><span class='after'></span></div>";
+        html += "<span class='after'></span>";
+        html += "</a>";
+        html += "</div>";
     }
 
-    $html += "<br class=\"mq-wide\" />";
+    html += "<br class='mq-wide' />";
 
-    return $html;
+    return html;
+}
+
+var quote = function(){
+    var random = Math.floor(Math.random() * quotes.length);
+    var html = "";
+
+    html += "<blockquote>";
+    html += quotes[random][1];
+    html += "<cite>";
+    html += quotes[random][0]
+    html += "</cite></blockquote>"
+
+    return html;
 }
