@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 /* --- VARIABLES --- */
 @font-face {
   font-family: Arual;
@@ -200,7 +200,7 @@ i.scroll:hover {
   }
 }
 /* --- GENERAL --- */
-/*# sourceMappingURL=style.css.map */
+/*#region GENERAL*/
 html {
   overflow-y: auto;
   background-color: #fff;
@@ -234,6 +234,17 @@ blockquote cite:before {
   font-family: Arual;
   font-size: 12em;
   color: #333;
+}
+.callout {
+  color: #ffffff;
+  display: table;
+  height: 400px;
+  width: 100%;
+  background: url(../img/callout.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .hexbg {
   position: absolute;
@@ -559,7 +570,7 @@ html body .mq-small-i-block,
 html body .mq-mobile-i-block {
   display: none !important;
 }
-/*# sourceMappingURL=style.css.map */
+/*#endregion*/
 @media screen and (max-width: 1290px) {
   /* line 2156, ../../../src/scss/screen.scss */
   #work-projects .container {
