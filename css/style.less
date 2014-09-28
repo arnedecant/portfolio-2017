@@ -3,6 +3,28 @@
 @import "temp.less";
 /* --- GENERAL --- */
 /*#region GENERAL*/
+::selection{
+    background: @cPrimary;
+    color: white;
+}
+
+::-moz-selection{
+    background: @cPrimary;
+    color: white;
+}
+
+.primary > a > .inner > p::selection,
+.primary > a > .inner > h3::selection{
+    background: @cSecondary;
+    color: white;
+}
+
+.primary > a > .inner > p::-moz-selection,
+.primary > a > .inner > h3::-moz-selection{
+    background: @cSecondary;
+    color: white;
+}
+
 html {
     overflow-y: auto;
     background-color: #fff;

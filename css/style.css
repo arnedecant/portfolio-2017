@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /* --- VARIABLES --- */
 @font-face {
   font-family: Arual;
@@ -200,7 +200,25 @@ i.scroll:hover {
   }
 }
 /* --- GENERAL --- */
-/*#region GENERAL*/
+/*# sourceMappingURL=style.css.map */
+::selection {
+  background: #00e5a8;
+  color: white;
+}
+::-moz-selection {
+  background: #00e5a8;
+  color: white;
+}
+.primary > a > .inner > p::selection,
+.primary > a > .inner > h3::selection {
+  background: #d268ea;
+  color: white;
+}
+.primary > a > .inner > p::-moz-selection,
+.primary > a > .inner > h3::-moz-selection {
+  background: #d268ea;
+  color: white;
+}
 html {
   overflow-y: auto;
   background-color: #fff;
@@ -570,7 +588,7 @@ html body .mq-small-i-block,
 html body .mq-mobile-i-block {
   display: none !important;
 }
-/*#endregion*/
+/*# sourceMappingURL=style.css.map */
 @media screen and (max-width: 1290px) {
   /* line 2156, ../../../src/scss/screen.scss */
   #work-projects .container {
