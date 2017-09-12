@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'Modern Sans';
+	src: url('../fonts/ModernSans.eot');
+	src: url('../fonts/ModernSans.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ModernSans.woff') format('woff'),
+		url('../fonts/ModernSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Adamas';
+	src: url('../fonts/Adamas-Regular.eot');
+	src: url('../fonts/Adamas-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Adamas-Regular.woff') format('woff'),
+		url('../fonts/Adamas-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// colors
+
+// $color-1: #242322; // Tuatara
+// $color-2: #a5c4bc; // Opal
+// $color-3: #ffffff; // White
+// $color-4: #402f44; // Blackcurrant
+// $color-5: #e4dcca; // Pearl Bush
+
+$color-1: #242322; // Tuatara
+$color-2: #a5c4bc; // Opal
+$color-3: #ffffff; // White
+$color-4: #402f44; // Blackcurrant
+$color-5: #f5f5f5; // Pearl Bush
+
+// fonts 
+
+// $primary-font: 'PT Sans', sans-serif;
+// $secondary-font: 'IM Fell Double Pica', serif;
+
+$primary-font: 'PT Sans', sans-serif;
+$secondary-font: 'Modern Sans', sans-serif;
