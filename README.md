@@ -1,9 +1,6 @@
 Portfolio Arne Decant
 =========
 
-[Website](https://www.arnedecant.be/)
-[Development](https://dev.arnedecant.be/)
+View my [Website](https://www.arnedecant.be/) or go to my [Development platform](https://dev.arnedecant.be/).
 
-Ink bleed transition effect inspired by CodyHouse.
-
-[Article on CodyHouse](https://codyhouse.co/gem/ink-transition-effect/)
+Ink bleed transition effect inspired by CodyHouse ([article](https://codyhouse.co/gem/ink-transition-effect/)).
