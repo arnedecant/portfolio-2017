@@ -1,9 +1,9 @@
-Ink Transition Effect
+Portfolio Arne Decant
 =========
-An ink bleed transition effect, powered by CSS animations.
+
+[Website](https://www.arnedecant.be/)
+[Development](https://dev.arnedecant.be/)
+
+Ink bleed transition effect inspired by CodyHouse.
 
 [Article on CodyHouse](https://codyhouse.co/gem/ink-transition-effect/)
-
-[Demo](https://codyhouse.co/demo/ink-transition-effect/index.html)
- 
-[Terms](https://codyhouse.co/terms/)
