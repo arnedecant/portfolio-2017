@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|IM+Fell+Double+Pica:400italic' rel='stylesheet' type='text/css'>
+	<!--build:css css/styles.min.css-->
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/styles.css"> <!-- Resource style -->
+	<!--endbuild-->
+  	
+	<title>Arne Decant</title>
+</head>
+<body>
+<main class="cd-main-content">
+	<div class="center">
+		<h1>
+			<span class="word">
+				<span class="letter">H</span>
+				<span class="letter">i</span>
+				<span class="letter">,</span>
+			</span>
+			<span class="space">&nbsp;</span>
+			<span class="word">
+				<span class="letter">m</span>
+				<span class="letter">y</span>
+			</span>
+			<span class="space">&nbsp;</span>
+			<span class="word">
+				<span class="letter">n</span>
+				<span class="letter">a</span>
+				<span class="letter">m</span>
+				<span class="letter">e</span>
+			</span>
+			<span class="space">&nbsp;</span>
+			<span class="word">
+				<span class="letter">i</span>
+				<span class="letter">s</span>
+			</span>
+			<span class="space">&nbsp;</span>
+			<span class="word">
+				<span class="letter">A</span>
+				<span class="letter">r</span>
+				<span class="letter">n</span>
+				<span class="letter">e</span>
+			</span>
+			<span class="space">&nbsp;</span>
+			<span class="word">
+				<span class="letter">a</span>
+				<span class="letter">n</span>
+				<span class="letter">d</span>
+			</span>
+			<span class="space">&nbsp;</span>
+			<span class="word">
+				<span class="letter">I</span>
+				<span class="letter">'</span>
+				<span class="letter">m</span>
+			</span>
+			<span class="space">&nbsp;</span>
+			<span class="word">
+				<span class="letter">a</span>
+			</span>
+			<span class="space">&nbsp;</span>
+			<span class="word">
+				<span class="letter">w</span>
+				<span class="letter">e</span>
+				<span class="letter">b</span>
+				<span class="letter">d</span>
+				<span class="letter">e</span>
+				<span class="letter">v</span>
+				<span class="letter">e</span>
+				<span class="letter">l</span>
+				<span class="letter">o</span>
+				<span class="letter">p</span>
+				<span class="letter">e</span>
+				<span class="letter">r</span>
+				<span class="letter">.</span>
+			</span>
+		</h1>
+		<a href="#0" class="cd-btn cd-modal-trigger cta">About</a>
+	</div>
+</main> <!-- .cd-main-content -->
+
+<div class="cd-modal">
+	<div class="modal-content">
+		<h1>The person behind my desk</h1>
+		
+		<p>
+			My name is Arne Decant and I was born and raised in Kortrijk, Belgium. I went to school to study a joined education accounting/informatics, whereafter I chose to go to college and continue in informatics. I studied <a href="http://www.nmct.be" target="_blank">NMCT</a> at <a href="http://www.howest.be" target="_blank">Howest</a>, University College of West Flanders and finished my education in June 2014.
+		</p>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis saepe amet sit fugit rerum, corporis minus vitae officia quaerat incidunt voluptate, blanditiis ea est quibusdam voluptas animi quasi totam magni, commodi praesentium. Possimus quam illo ipsam iste unde totam cupiditate deleniti, impedit assumenda hic eligendi natus tempora dolores quod mollitia ab non sunt eaque adipisci, suscipit quas aliquid officiis beatae. Necessitatibus voluptatibus, perferendis tenetur perspiciatis adipisci nesciunt eum ex fuga commodi iure numquam enim rem ullam labore nisi magni sint voluptatem quos! Eum iure exercitationem voluptates repellendus culpa doloremque laborum animi illum, sint fugit soluta possimus a fuga veritatis molestias corporis placeat illo pariatur dolor reiciendis earum, sapiente omnis. Placeat maiores omnis, porro officia, laborum eos. Fugiat mollitia inventore consequuntur odit eaque, rerum recusandae, eum sint molestiae consequatur culpa deserunt quae aliquid dolor tempora tenetur architecto repellendus enim quasi atque, odio voluptas. Tenetur repellendus explicabo ipsum inventore quia aut eos expedita necessitatibus asperiores blanditiis! Delectus nisi laudantium ipsum! Quasi blanditiis corrupti dicta maiores placeat laboriosam delectus ipsum facere voluptas, magnam voluptatibus, perferendis alias ullam saepe, perspiciatis recusandae voluptates, dolores praesentium?
+		</p>
+	</div> <!-- .modal-content -->
+
+	<a href="#0" class="modal-close">Close</a>
+</div> <!-- .cd-modal -->
+
+<div class="cd-transition-layer"> 
+	<div class="bg-layer"></div>
+</div> <!-- .cd-transition-layer -->
+
+<!--build:js js/main.min.js -->
+<script src="js/modernizr.js"></script>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>

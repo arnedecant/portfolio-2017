@@ -21,7 +21,9 @@
     "imagemin-gifsicle": "^5.0.0",
     "imagemin-jpegtran": "^5.0.0",
     "imagemin-optipng": "^5.1.0",
-    "run-sequence": "^1.1.5"
+    "run-sequence": "^1.1.5",
+    "gulp-sass-glob": "^1.0.8"
+    },
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

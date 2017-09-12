@@ -1,0 +1,1 @@
+php -S dev.local:80 -t app/ routing.php

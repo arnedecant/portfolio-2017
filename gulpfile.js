@@ -1,8 +1,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var sassGlob = require('gulp-sass-glob');
 var browserSync = require('browser-sync').create();
 
-var useref = require('gulp-useref');
+// var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
@@ -17,6 +18,7 @@ var runSequence = require('run-sequence');
 
 gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss')
+    .pipe(sassGlob())
 		.pipe(sourcemaps.init())
     	.pipe(sass({
     		errLogToConsole: true
@@ -34,9 +36,10 @@ gulp.task('sass', function() {
 
 gulp.task('browserSync', function() {
   browserSync.init({
-    server: {
-      baseDir: 'app'
-    },
+    proxy: "dev.local",
+    // server: {
+    //   baseDir: 'app'
+    // },
   });
 });
 
@@ -76,7 +79,7 @@ gulp.task('default', function (callback) {
   )
 });
 
-gulp.task('build', ['clean:dist', 'sass', 'useref', 'images', 'fonts'], function (callback) {
+gulp.task('build', ['clean:dist', 'browser-sync', 'sass', 'useref', 'images', 'fonts'], function (callback) {
   runSequence('clean:dist', 
     ['sass', 'useref', 'images', 'fonts'],
     callback
