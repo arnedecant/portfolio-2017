@@ -1,7 +1,6 @@
 jQuery(document).ready(function($){
 	nameParallax();
 
-
 	//cache some jQuery objects
 	var modalTrigger = $('.cd-modal-trigger'),
 		transitionLayer = $('.cd-transition-layer'),
@@ -81,8 +80,6 @@ jQuery(document).ready(function($){
 			$("main").addClass("mouseMoved");
 		});
 
-		//console.log(buttonValues);
-
 		$("h1 span.letter").each(function(index, value) {
 			var $span = $(this);
 			var velocity = Math.random() * 2 - 1;
@@ -116,8 +113,6 @@ jQuery(document).ready(function($){
 						left: newLeft
 					});
 				}
-
-				
 			});
 
 			$button.on('mouseenter', function() {

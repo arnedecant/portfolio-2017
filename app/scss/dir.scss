@@ -1,10 +1,14 @@
 @import 'variables/*';
 
+:root {
+	--left-percentage: 0%;
+	--right-percentage: 100%;
+}
+
 body {
 	// background-image: url("https://source.unsplash.com/random");
 	background: #fc00ff;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #fc00ff, #00dbde);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #fc00ff, #00dbde); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(135deg, #fc00ff var(--left-percentage), #00dbde var(--right-percentage));
 
 	font-family: $fPrimary;
 
