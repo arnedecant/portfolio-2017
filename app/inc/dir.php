@@ -23,7 +23,7 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 <html>
 <head>
 	<title>List directory</title>
-	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|IM+Fell+Double+Pica:400italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|IM+Fell+Double+Pica:400italic|Overpass+Mono:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?= $host . '/css/reset.css' ?>">
 	<link rel="stylesheet" type="text/css" href="<?= $host . '/css/dir.css' ?>">
 </head>
@@ -44,7 +44,7 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 	<footer>
 		<div class="tooltip tooltip--narvi" data-type="narvi">
 			<div class="tooltip__trigger" role="tooltip" aria-describedby="info-narvi">
-				<span class="tooltip__trigger-text">Narvi</span>
+				<a href="mailto:hello@arnedecant.be" class="tooltip__trigger-text">Contact</a>
 			</div>
 			<div class="tooltip__base">
 				<svg class="tooltip__shape" width="100%" height="100%" viewBox="0 0 400 300">
@@ -59,7 +59,7 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 	<script src="/js/jquery-2.1.4.js"></script>
 	<script src="/js/anime.min.js"></script>
 	<script src="/js/charming.min.js"></script>
-	<script src="/js/Tooltip.min.js"></script>
+	<script src="/js/Tooltip.js"></script>
 	<script src="/js/dir.js"></script>
 </body>
 </html>

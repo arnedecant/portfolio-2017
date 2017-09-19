@@ -1,3 +1,4 @@
+var style = getComputedStyle(document.body);
 const config = {
 	narvi: {
 		in: {
@@ -36,7 +37,7 @@ const config = {
 				{value: 1, duration: 250, easing: 'easeOutQuint'}
 				],
 				color: [
-				{value: '#6fbb95', duration: 1, delay: 100, easing: 'easeOutQuint'}
+				{value: style.getPropertyValue('--color-trigger-highlight'), duration: 1, delay: 100, easing: 'easeOutQuint'}
 				]
 			}
 		},
@@ -80,7 +81,7 @@ const config = {
 				{value: 1, duration: 200, easing: 'easeOutQuint'}
 				],
 				color: [
-				{value: '#666', duration: 1, delay: 200, easing: 'easeOutQuint'}
+				{value: style.getPropertyValue('--color-trigger-default'), duration: 1, delay: 200, easing: 'easeOutQuint'}
 				]
 			}
 		}
