@@ -1,5 +1,6 @@
 jQuery(document).ready(function($){
 	nameParallax();
+	initTooltip();
 
 	//cache some jQuery objects
 	var modalTrigger = $('.cd-modal-trigger'),
@@ -142,5 +143,10 @@ jQuery(document).ready(function($){
 				buttonValues.hover = false;
 			});
 		});
+	}
+
+	function initTooltip() {
+		const tooltips = Array.from(document.querySelectorAll('.tooltip'));
+		const init = (() => tooltips.forEach(t => new Tooltip(t, config)))();
 	}
 });

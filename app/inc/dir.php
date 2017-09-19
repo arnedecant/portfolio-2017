@@ -27,7 +27,7 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 	<link rel="stylesheet" type="text/css" href="<?= $host ?>/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="<?= $host ?>/css/dir.css">
 </head>
-<body>
+<body class="dir">
 	<section class="directories">
 		<ul>
 		<?php foreach($files as $file): ?>
@@ -60,6 +60,7 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 	<script src="<?= $host ?>/js/anime.min.js"></script>
 	<script src="<?= $host ?>/js/charming.min.js"></script>
 	<script src="<?= $host ?>/js/Tooltip.js"></script>
+	<script src="<?= $host ?>/js/config.js"></script>
 	<script src="<?= $host ?>/js/dir.js"></script>
 </body>
 </html>

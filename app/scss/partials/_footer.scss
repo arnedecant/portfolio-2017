@@ -4,7 +4,7 @@ footer {
 	font-family: 'Overpass Mono', monospace;
 
 	a {
-		color: var(--color-trigger);
+		color: var(--color-trigger-default);
 	}
 }
 
@@ -20,7 +20,7 @@ footer {
 			display: block;
 			padding: 0.85em;
 			text-decoration: none;
-			color: var(--color-trigger);
+			color: var(--color-trigger-default);
 		}
 	}
 
@@ -39,7 +39,7 @@ footer {
 	}
 
 	&__content {
-		color: $cBackground;
+		color: $cPrimary;
 		display: flex;
 		position: relative;
 		align-items: center;
@@ -60,6 +60,16 @@ footer {
 		left: 0;
 	}
 	
+	&__shape {
+		fill: $cSecondary;
+	}
+}
+
+body.dir .tooltip {
+	&__content {
+		color: $cBackground;
+	}
+
 	&__shape {
 		fill: $cBlack;
 	}

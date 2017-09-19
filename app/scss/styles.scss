@@ -2,6 +2,11 @@
 @import 'variables/*';
 @import 'partials/*';
 
+:root {
+	--color-trigger-default: $cHighlight;
+	--color-trigger-highlight: $cSecondary;
+}
+
 /* -------------------------------- 
 
 Primary style
@@ -84,14 +89,21 @@ Main Content
 	width: 100%;
 	height: 100vh;
 	/* vertically align its content */
-	display: table;
+	display: flex;
 	background-color: $cBackground;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 
 	.center {
 		/* vertically align inside parent element */
-		display: table-cell;
-		vertical-align: middle;
+		display: flex;
+		width: 100%;
+		height: 100%;
 		text-align: center;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 	}
 }
 
