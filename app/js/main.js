@@ -74,7 +74,25 @@ jQuery(document).ready(function($){
 			hover: false
 		};
 
-		console.log(buttonValues);
+		var htmlH1 = "";
+		var $h1 = $("h1.split-letters");
+		var words = $h1.text().split(" ");
+
+		for (var i = 0, word; word = words[i]; i++) {
+			var letters = word.split("");
+			var htmlWord = '';
+
+			htmlWord += '<span class="word">';
+			for (var j = 0, letter; letter = letters[j]; j++) {
+				htmlWord += '<span class="letter">' + letter + '</span>';
+			}
+			htmlWord += '</span>';
+			htmlWord += '<span class="space">&nbsp;</span>';
+
+			htmlH1 += htmlWord;
+		}
+
+		$h1.html(htmlH1);
 
 		$("main").on('mousemove', function(event) {
 			$("main").addClass("mouseMoved");
