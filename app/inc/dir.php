@@ -24,8 +24,8 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 <head>
 	<title>List directory</title>
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|IM+Fell+Double+Pica:400italic|Overpass+Mono:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="<?= $host . '/css/reset.css' ?>">
-	<link rel="stylesheet" type="text/css" href="<?= $host . '/css/dir.css' ?>">
+	<link rel="stylesheet" type="text/css" href="<?= $host ?>/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="<?= $host ?>/css/dir.css">
 </head>
 <body>
 	<section class="directories">
@@ -55,11 +55,11 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 		</div>
 	</footer>
 
-	<script src="/js/modernizr.js"></script>
-	<script src="/js/jquery-2.1.4.js"></script>
-	<script src="/js/anime.min.js"></script>
-	<script src="/js/charming.min.js"></script>
-	<script src="/js/Tooltip.js"></script>
-	<script src="/js/dir.js"></script>
+	<script src="<?= $host ?>/js/modernizr.js"></script>
+	<script src="<?= $host ?>/js/jquery-2.1.4.js"></script>
+	<script src="<?= $host ?>/js/anime.min.js"></script>
+	<script src="<?= $host ?>/js/charming.min.js"></script>
+	<script src="<?= $host ?>/js/Tooltip.js"></script>
+	<script src="<?= $host ?>/js/dir.js"></script>
 </body>
 </html>
