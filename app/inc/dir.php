@@ -44,7 +44,8 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 	<footer>
 		<div class="tooltip tooltip--narvi" data-type="narvi">
 			<div class="tooltip__trigger" role="tooltip" aria-describedby="info-narvi">
-				<a href="mailto:hello@arnedecant.be" class="tooltip__trigger-text">Contact</a>
+				<!-- <a href="mailto:hello@arnedecant.be" class="tooltip__trigger-text">Contact</a> -->
+				<a href="https://arnedecant.be" class="tooltip__trigger-text">Home</a>
 			</div>
 			<div class="tooltip__base">
 				<svg class="tooltip__shape" width="100%" height="100%" viewBox="0 0 400 300">
