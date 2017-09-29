@@ -23,6 +23,7 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 <html>
 <head>
 	<title>List directory</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|IM+Fell+Double+Pica:400italic|Overpass+Mono:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?= $host ?>/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="<?= $host ?>/css/dir.css">
