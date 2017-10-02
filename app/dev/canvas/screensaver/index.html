@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Screensaver</title>
+    <style>
+        html, body, canvas {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            overflow: hidden;
+        }
+        body {
+            line-height: 1;
+        }
+        canvas {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas class="thumbnail"></canvas>
+
+    <script>
+
+        window.onload = function () {
+
+            var h = parseInt(window.innerHeight);
+            var w = parseInt(window.innerWidth);
+
+            var canvas = document.getElementsByTagName("canvas")[0];
+            var ctx = canvas.getContext("2d");
+            var circles = [];
+            canvas.setAttribute("height", parseInt(window.innerHeight) + "");
+            canvas.setAttribute("width", parseInt(window.innerWidth) + "");
+
+            window.onresize = function () {
+                h = parseInt(window.innerHeight);
+                w = parseInt(window.innerWidth);
+                canvas.setAttribute("height", parseInt(window.innerHeight) + "");
+                canvas.setAttribute("width", parseInt(window.innerWidth) + "");
+            }
+
+            if (canvas && ctx) {
+                canvas.setAttribute("height", parseInt(window.innerHeight) + "");
+                canvas.setAttribute("width", parseInt(window.innerWidth) + "");
+                for (var i = 0; i < 100; i++) {
+                    circles[i] = new Circle();
+                    circles[i].draw();
+                }
+                setInterval(function () {
+                    ctx.clearRect(0, 0, parseInt(window.innerWidth), parseInt(window.innerHeight));
+                    var len = circles.length;
+                    for (var i = 0; i < len; i++) {
+                        var x = circles[i].x;
+                        var y = circles[i].y;
+
+                        if (x < 0 || x > w) { circles[i].moveX = -(circles[i].moveX); console.log(circles[i].x) }
+                        if (y < 0 || y > h) { circles[i].moveY = -(circles[i].moveY); }
+
+                        circles[i].x += circles[i].moveX;
+                        circles[i].y += circles[i].moveY;
+                        circles[i].draw();
+                    }
+                }, 25);
+            }
+
+            document.body.onclick = function (e) {
+                addCircle(e.clientX, e.clientY);
+            };
+
+            function drawCircle(x, y, r, a1, a2, c, color) {
+                ctx.beginPath();
+                ctx.arc(x, y, r, a1, a2, c);
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+
+            function addCircle(x, y) {
+                circles[circles.length] = new Circle();
+                if (x != undefined && y != undefined) {
+                    circles[circles.length - 1].x = x;
+                    circles[circles.length - 1].y = y;
+                }
+                circles[circles.length - 1].draw();
+            }
+
+            function Circle() {
+                this.x = Math.random() * (parseInt(window.innerWidth) - 60) + 10;
+                this.y = Math.random() * (parseInt(window.innerHeight) - 60) + 10;
+                this.r = Math.random() * (50 - 1) + 1;
+                this.color = "rgba(" + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + ",0.6)";
+                this.startA = 0;
+                this.endA = 2 * Math.PI;
+                this.clockwise = true;
+                this.moveX = Math.random() * 4 - 2;
+                this.moveY = Math.random() * 4 - 2;
+                this.draw = function () {
+                    drawCircle(this.x, this.y, this.r, this.startA, this.endA, this.clockwise, this.color);
+                }
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>

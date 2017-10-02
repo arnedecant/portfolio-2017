@@ -7,11 +7,24 @@
 	100% { background-position: 0% 50% }
 }
 
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -100%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}
+
 :root {
 	--left-percentage: 0%;
 	--right-percentage: 100%;
 	--color-trigger-default: $cHighlight;
 	--color-trigger-highlight: $cSecondary;
+	--animation-duration: 250ms;
 }
 
 body {
@@ -23,14 +36,16 @@ body {
 	animation: gradient 15s ease infinite;
 
 	font-family: $fPrimary;
-
 	// background-size: cover;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	height: 100vh;
+
+	&, > #main {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// justify-content: center;
+	}
 }
 
 .directories {
@@ -59,5 +74,18 @@ body {
 			background-color: $cDefault;
 			background-color: darken($cBackground, 5%);
 		}
+	}
+}
+
+.m-scene {
+	> .directories {
+		animation-duration: var(--animation-duration);
+	    transition-timing-function: ease-in;
+	    animation-fill-mode: both;
+	    animation-name: fadeInDown;
+	}
+
+	&.is-exiting > .directories {
+		animation-direction: alternate-reverse;
 	}
 }

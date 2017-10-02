@@ -29,18 +29,20 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 	<link rel="stylesheet" type="text/css" href="<?= $host ?>/css/dir.css">
 </head>
 <body class="dir">
-	<section class="directories">
-		<ul>
-		<?php foreach($files as $file): ?>
-			<?php if ($file == '..'): ?>
-				<li><a href="<?= $parent_url ?>"><?= $file ?></a></li>
-			<?php else: ?>
-				<li><a href="<?= $file ?>"><?= $file ?></a></li>
-			<?php endif; ?>
-			
-		<?php endforeach; ?>
-		</ul>
-	</section>
+	<div id="main" class="m-scene">
+		<section class="directories">
+			<ul>
+			<?php foreach($files as $file): ?>
+				<?php if ($file == '..'): ?>
+					<li><a href="<?= $parent_url ?>"><?= $file ?></a></li>
+				<?php else: ?>
+					<li><a href="<?= $url . $file ?>"><?= $file ?></a></li>
+				<?php endif; ?>
+				
+			<?php endforeach; ?>
+			</ul>
+		</section>
+	</div>
 
 	<footer>
 		<div class="tooltip tooltip--narvi" data-type="narvi">
@@ -59,8 +61,8 @@ if (filter_var($parent_url, FILTER_VALIDATE_URL) === FALSE) $parent_url = $host;
 
 	<script src="<?= $host ?>/js/modernizr.js"></script>
 	<script src="<?= $host ?>/js/jquery-2.1.4.js"></script>
+	<script src="<?= $host ?>/js/jquery.smoothState.js"></script>
 	<script src="<?= $host ?>/js/anime.min.js"></script>
-	<script src="<?= $host ?>/js/charming.min.js"></script>
 	<script src="<?= $host ?>/js/Tooltip.js"></script>
 	<script src="<?= $host ?>/js/config.js"></script>
 	<script src="<?= $host ?>/js/dir.js"></script>
